@@ -10072,6 +10072,53 @@ ul.social-box li a:hover {
 }
 
 
+  .whatsapp-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 9999;
+  }
+
+  .whatsapp-float img {
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+  }
+
+  .whatsapp-float img:hover {
+    transform: scale(1.1);
+  }
+
+  /* Burbuja de mensaje */
+  .whatsapp-bubble {
+    position: absolute;
+    bottom: 70px;
+    left: 20;
+    background-color: #25D366;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 15px 15px 15px 0;
+    font-size: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.5s ease;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+
+  .whatsapp-bubble.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Pulso */
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+
 
 
 
